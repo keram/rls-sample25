@@ -1,0 +1,23 @@
+Started GET "/posts" for 127.0.0.1 at 2025-03-17 01:09:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Store'*/[0m
+Processing by PostsController#index as HTML
+-t- before SampleService instantiation
+-t- before initializing AR var
+-t- after initializing AR var
+-t- after SampleService instantiation
+-t- before #call return
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" /*action='index',application='Store',controller='posts'*/[0m
+  ↳ app/controllers/posts_controller.rb:25:in 'PostsController#index'
+-t- service.call AR call 2
+-t- after service.call
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='Store',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:8
+  Rendered posts/_post.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered posts/_post.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 30.8ms | GC: 16.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | GC: 17.9ms)
+Completed 200 OK in 72ms (Views: 40.4ms | ActiveRecord: 1.6ms (2 queries, 0 cached) | GC: 18.1ms)
+
+
